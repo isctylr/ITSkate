@@ -43,4 +43,15 @@ After resetting you'll have to reconnect with the baud rate of 115200. You can t
 
 ## Loading the software
 
+Download VescUartControl library by RollingGecko Make sure to choose the
+VESC6 branch if you program your vesc with vesc-tool and not bldc.
+Add the following lines to VescUart.h:
+
+#ifdef ARDUINO_ARCH_SAMD
+#define SERIALIO Serial1  
+#define DEBUGSERIAL Serial
+#endif
+
+
+
 
